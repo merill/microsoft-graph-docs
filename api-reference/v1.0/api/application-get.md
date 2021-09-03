@@ -42,7 +42,12 @@ Do not supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and an [application](../resources/application.md) object in the response body.
 ## Examples
-### Request
+
+### Example 1: Get application by ObjectId
+
+Get application by ObjectId
+
+#### Request
 Here is an example of the request.
 
 
@@ -73,7 +78,7 @@ GET https://graph.microsoft.com/v1.0/applications/{id}
 ---
 
 
-### Response
+#### Response
 Here is an example of the response. 
 
 >**Note:** The response object shown here might be shortened for readability.
@@ -140,6 +145,116 @@ Content-length: 1044
             "enableAccessTokenIssuance": false
         }
     }
+}
+```
+
+### Example 2: Get application by AppId
+
+Get application by AppId
+
+#### Request
+Here is an example of the request.
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_application"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/applications?$filter=appid eq '{appId}'
+```
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/get-application-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-application-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Objective-C](#tab/objc)
+[!INCLUDE [sample-code](../includes/snippets/objc/get-application-objc-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/get-application-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+
+#### Response
+Here is an example of the response. 
+
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.application"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 1044
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#applications",
+    "value": [
+      {
+          "@odata.context": "https://graph.microsoft.com/v2/536279f6-15cc-45f2-be2d-61e352b51eef/directoryObjects/c15126bd-a918-42ee-b7e5-9b0aa1482e6d/Microsoft.DirectoryServices.Application",
+          "id": "03ef14b0-ca33-4840-8f4f-d6e91916010e",
+          "deletedDateTime": null,
+          "isFallbackPublicClient": null,
+          "appId": "631a96bc-a705-4eda-9f99-fdaf9f54f6a2",
+          "applicationTemplateId": null,
+          "identifierUris": [],
+          "createdDateTime": "2019-09-17T19:10:35.2742618Z",
+          "disabledByMicrosoftStatus": null,
+          "displayName": "Display name",
+          "isDeviceOnlyAuthSupported": null,
+          "groupMembershipClaims": null,
+          "optionalClaims": null,
+          "addIns": [],
+          "publisherDomain": "contoso.onmicrosoft.com",
+          "signInAudience": "AzureADandPersonalMicrosoftAccount",
+          "tags": [],
+          "tokenEncryptionKeyId": null,
+          "api": {
+              "requestedAccessTokenVersion": 2,
+              "acceptMappedClaims": null,
+              "knownClientApplications": [],
+              "oauth2PermissionScopes": [],
+              "preAuthorizedApplications": []
+          },
+          "appRoles": [],
+          "publicClient": {
+              "redirectUris": []
+          },
+          "info": {
+              "termsOfServiceUrl": null,
+              "supportUrl": null,
+              "privacyStatementUrl": null,
+              "marketingUrl": null,
+              "logoUrl": null
+          },
+          "keyCredentials": [],
+          "parentalControlSettings": {
+              "countriesBlockedForMinors": [],
+              "legalAgeGroupRule": "Allow"
+          },
+          "passwordCredentials": [],
+          "requiredResourceAccess": [],
+          "web": {
+              "redirectUris": [],
+              "homePageUrl": null,
+              "logoutUrl": null,
+              "implicitGrantSettings": {
+                  "enableIdTokenIssuance": false,
+                  "enableAccessTokenIssuance": false
+              }
+          }
+      }
+   ]
 }
 ```
 
