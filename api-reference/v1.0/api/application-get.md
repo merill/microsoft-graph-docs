@@ -43,12 +43,12 @@ Do not supply a request body for this method.
 If successful, this method returns a `200 OK` response code and an [application](../resources/application.md) object in the response body.
 ## Examples
 
-### Example 1: Get application by ObjectId
+### Example 1: Get application by object ID
 
-Get application by ObjectId
+The following example shows how to get an application by object ID.
 
 #### Request
-Here is an example of the request.
+The following is an example of the request.
 
 
 # [HTTP](#tab/http)
@@ -79,7 +79,7 @@ GET https://graph.microsoft.com/v1.0/applications/{id}
 
 
 #### Response
-Here is an example of the response. 
+The following is an example of the response. 
 
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -148,12 +148,12 @@ Content-length: 1044
 }
 ```
 
-### Example 2: Get application by AppId
+### Example 2: Get application by app ID
 
-Get application by AppId
+The following example shows how to get an application by app ID.
 
 #### Request
-Here is an example of the request.
+The following is an example of the request.
 
 
 # [HTTP](#tab/http)
@@ -184,7 +184,7 @@ GET https://graph.microsoft.com/v1.0/applications?$filter=appid eq '{appId}'
 
 
 #### Response
-Here is an example of the response. 
+The following is an example of the response. 
 
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
